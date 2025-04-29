@@ -1,12 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/atoms/Button";
-import { FloatingInput } from "@/components/atoms/Input";
 import { SocialContainer } from "@/components/molecules/SocialContainer";
-import { CardMapa } from "@/components/molecules/CardMapa";
-import { LogisticIcon } from "@/components/icons/MapaIcons";
-import { CardLiquidacion } from "@/components/molecules/CardLiquidacion";
-import { Table } from "@/components/atoms/Table";
+import LoginForm from "@/components/molecules/LoginForm";
 
 export default function LoginPage() {
   return (
@@ -38,39 +33,14 @@ export default function LoginPage() {
           </p>
         </div>        
       </div>
-      <div className="w-1/2 h-full flex items-center justify-center p-8">
+      <div className="w-1/2 h-full flex flex-col items-center justify-between p-20">
         {/* <ContainerLogin/> */}
-        <div className="w-full max-w-md text-center">
-          <h1 className="text-2xl font-semibold mb-4">Iniciar sesión</h1>
-          <Button className="mt-4">
-            Ingresar
-          </Button>
-          <FloatingInput
-            label="Correo electrónico"
-            placeholder="correo"
-            type="email"
-          />
-          <SocialContainer />
-          <CardMapa
-            title="APOYO"
-            icon={<LogisticIcon/>}
-            items={[
-              "Apoyo Logistico",
-              "Docencia Servicio",
-              "Gestion Salud",
-              "Gestion Informacion",
-              "Gestion Juridica",
-              "Mantenimiento Hospitalario"
-            ]}
-          />
-          <Table />
-          {/* <formLogin/> */}
+        <div className="w-full max-w-sm text-center bg-[#D9D9D9] p-8 rounded-3xl shadow-md shadow-black/30">
+          <LoginForm />
         </div>
-        <CardLiquidacion
-            imagen="/LogoClinica2.png"
-            title="Glicol y CIA"
-            valor="$ 20.000"
-          />
+        <div className="w-full flex flex-col items-center justify-end mt-auto -mb-13">
+          <SocialContainer />
+        </div>
       </div>
     </main>
   );

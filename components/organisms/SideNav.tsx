@@ -3,38 +3,26 @@ import Link from 'next/link'
 import { LogoClinica } from '../atoms/LogoClinica'
 import { NavLinkItem } from '../molecules/NavLinkItem'
 import { LogOut } from "lucide-react";
-import { signOut } from "next-auth/react";
 import { Button } from '../atoms/Button';
 
-export default function SideNav ({ links }: any) {
+export default function SideNav() {
   return (
-    <div className='flex h-full'>
-      <Link href="/" className='mb-2 w-[200px]'>
-        <div className='w-32'>
+    <div className='flex h-full flex-col'>
+      <Link href="#" className='flex items-center justify-start'>
+        <div className='w-full'>
           <LogoClinica />
         </div>
       </Link>
-
-      <div className='flex grow flex-col'>
-        {links.map((link: any) => (
-          <NavLinkItem 
-            key={link.name}
-            href={link.href}
-            icon={link.icon}
-            name={link.name}
-          />
-        ))}
-
-        <form className='h-[48px] w-full grow'>
-          <div className='flex flex-col items-center justify-center mt-auto mb-4'>
-            <LogOut className='w-6' />
-            <Button 
-              className='mt-4'
-            >
-              Salir
-            </ Button>
-          </div>
-        </form>
+      <hr className='text-red-900 text-shadow-lg border'/>
+      <div className='flex grow flex-col justify-between'>
+        <NavLinkItem />
+        <div className='flex flex-col items-center justify-end mt-auto mb-4'>
+          <Button
+            className='mt-4 gap-2'
+          >
+            Salir <LogOut className="ml-auto h-5 w-5 text-white" />
+          </ Button>
+        </div>
       </div>
     </div>
   )

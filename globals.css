@@ -25,3 +25,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist);
 }
+
+@font-face {
+  font-family: "BrushScript";
+  src: url("/public//fonts/fuenteClinica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -22,7 +22,9 @@ export const FloatingInput = ({ label, className, ...rest }: FloatingInputProps)
         }}
         placeholder=''
         className={clsx(
-          "peer w-full rounded-md bg-[#F4E2DE] px-4 pt-5 pb-2 text-lg text-gray-700 placeholder-transparent placeholder-gray-600 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent"
+          "peer w-full rounded-xl px-4 pt-5 pb-2 text-lg text-gray-700 placeholder-transparent placeholder-gray-600 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent",
+          "text-gray-700",
+          className,
         )}
       />
       <label
@@ -31,6 +33,7 @@ export const FloatingInput = ({ label, className, ...rest }: FloatingInputProps)
           isFocused || hasValue 
             ? "top-0 text-base" 
             : "top-3 text-lg",
+            className,
         )}
       >
         {label}

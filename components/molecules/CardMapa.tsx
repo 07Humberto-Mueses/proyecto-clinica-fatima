@@ -9,7 +9,7 @@ interface CardMapaProps {
 
 export const CardMapa = ({ title, icon, items }: CardMapaProps) => {
   return (
-    <div className='bg-white rounded-2xl shadow-md w-full max-w-md'>
+    <div className='bg-white rounded-2xl shadow-md w-full max-w-xs'>
       <h1 className='bg-[#FFAAAA] font-bold px-4 py-2 rounded-t-2xl flex items-center justify-center gap-2'>
         {icon}
         {title}

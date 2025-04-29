@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Marmelad, Nanum_Brush_Script } from "next/font/google";
+import { Marmelad } from "next/font/google";
 import "../globals.css";
 
 const geist = Marmelad({
