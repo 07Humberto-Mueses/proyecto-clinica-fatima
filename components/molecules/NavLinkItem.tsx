@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import { UserRoundCog, Barcode, Container, ChevronRight, Forklift } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
