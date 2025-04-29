@@ -40,7 +40,6 @@ const navLinks = {
 }
 
 export function NavLinkItem() {
-    const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState<string | null>(null);
 
     const toggleMenu = (menuName: string | null) => {
