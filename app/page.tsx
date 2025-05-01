@@ -1,11 +1,5 @@
-import { LogoClinica } from "@/components/atoms/LogoClinica";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="flex h-screen items-center justify-items-center min-h-screen relative overflow-hidden">
-      <main className="relative w-full h-full">
-        <LogoClinica />
-      </main>
-    </div>
-  );
+  redirect('/mapa');
 }

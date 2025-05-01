@@ -1,4 +1,6 @@
-import SideNav from "@/components/organisms/SideNav";
+"use client"
+import SideNavItem from "@/components/organisms/SideNavItem";
+import { talentoNavLinks } from "@/repositories/NavLinks/Apoyo";
 
 export default function DashboardLayout({
   children,
@@ -8,7 +10,7 @@ export default function DashboardLayout({
   return (
     <div className="flex h-screen">
         <aside className="w-64 h-screen bg-[#F2D8D5]">
-            <SideNav />
+            <SideNavItem navLinks={talentoNavLinks} />
         </aside>
         <main>
             {children}
