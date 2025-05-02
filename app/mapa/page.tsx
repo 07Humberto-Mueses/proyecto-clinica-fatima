@@ -11,6 +11,7 @@ export default function Page() {
       <div className='absolute top-4 right-4'>
         <Button
           className='gap-2'
+
         >
           <LogIn className="ml-auto h-5 w-5 text-white" />Ingresar
         </Button>
@@ -21,14 +22,14 @@ export default function Page() {
             title='APOYO'
             icon={<Forklift />}
             items={[
-              'Apoyo Logístico',
-              'Docencia Servicio',
-              'Gestión Calidad',
-              'Gestión Financiera',
-              'Gestión Informacion',
-              'Gestión Juridica',
-              'Mantenimiento Hospitalario',
-              'Talento Humano',
+              { name: 'Apoyo Logístico', href: "/dashboard/apoyoLogistico" },
+              { name: 'Docencia Servicio', href: "/dashboard/calidad" },
+              { name: 'Gestión Calidad', href: "/dashboard/docencia" },
+              { name: 'Gestión Financiera', href: "/dashboard/financiera" },
+              { name: 'Gestión Informacion', href: "/dashboard/informacion" },
+              { name: 'Gestión Juridica', href: "/dashboard/juridica" },
+              { name: 'Mantenimiento Hospitalario', href: "/dashboard/mantenimiento" },
+              { name: 'Talento Humano', href: "/dashboard/talento"},
             ]}
           />
           <div className='w-full justify-center items-center flex flex-col gap-8'>
@@ -36,7 +37,7 @@ export default function Page() {
               title='DIRECCIÓN'
               icon={<Waypoints />}
               items={[
-                'Gerencia y dirección'
+                { name: 'Gerencia y dirección', href: "/dashboard/Direcccion" }
               ]}
             />
             <LogoMapa />
@@ -45,13 +46,13 @@ export default function Page() {
             title='OPERACION'
             icon={<Hospital />}
             items={[
-              'Ayudas Diagnosticas',
-              'Ayudas Terapéuticas',
-              'Atencion al Usuario',
-              'Consulta Externa',
-              'Internación',
-              'Quirofano',
-              'Urgencias',
+              { name: 'Ayudas Diagnosticas', href: "/dashboard/Operacion" },
+              { name: 'Ayudas Terapéuticas', href: "/dashboard/Operacion" },
+              { name: 'Atencion al Usuario', href: "/dashboard/Operacion" },
+              { name: 'Consulta Externa', href: "/dashboard/Operacion" },
+              { name: 'Internación', href: "/dashboard/Operacion" },
+              { name: 'Quirofano', href: "/dashboard/Operacion" },
+              { name: 'Urgencias', href: "/dashboard/Operacion" },
             ]}
           />
         </div>
@@ -60,17 +61,17 @@ export default function Page() {
             title='CONTROL'
             icon={<SlidersVertical />}
             items={[
-              'Auditoria Contable',
-              'Auditoria Medica',
+              { name: 'Auditoria Contable', href: "/dashboard/Control" },
+              { name: 'Auditoria Medica', href: "/dashboard/Control" },
             ]}
           />
           <CardMapa
             title='EJE'
             icon={<FileUser />}
             items={[
-              'Gestion de Riesgo',
-              'Humanizacion',
-              'Seguridad del Paciente',
+              { name:'Gestion de Riesgo', href: "/dashboard/Eje" },
+              { name:'Humanizacion', href: "/dashboard/Eje" },
+              { name:'Seguridad del Paciente', href: "/dashboard/Eje" },
             ]}
           />
         </div>

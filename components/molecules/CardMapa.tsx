@@ -1,10 +1,11 @@
 import React from 'react'
 import { CheckIcon } from '../icons/MapaIcons';
+import Link from 'next/link';
 
 interface CardMapaProps {
   title: string;
   icon: React.ReactNode;
-  items: string[];
+  items: { name: string; href: string }[];
 }
 
 export const CardMapa = ({ title, icon, items }: CardMapaProps) => {
@@ -14,12 +15,17 @@ export const CardMapa = ({ title, icon, items }: CardMapaProps) => {
         {icon}
         {title}
       </h1>
-      <ul className='text-left px-4 py-3 space-y-2'>      
-        {items.map((item, idx) => ( 
-          <li key={idx} className='flex gap-2 items-center'>
-            <CheckIcon />
-            {item}
-          </li>
+      <ul className='text-left px-4 py-3 space-y-2'>
+        {items.map((item, idx) => (
+          <Link
+            key={item.name}
+            href={item.href}
+          >
+            <li key={idx} className='flex gap-2 items-center'>
+              <CheckIcon />
+              {item.name}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
