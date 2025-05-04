@@ -1,15 +1,4 @@
 import Image from "next/image"
-import { Alex_Brush, Roboto } from "next/font/google"
-
-const alexBrush = Alex_Brush({
-    subsets: ["latin"],
-    weight: "400", 
-});
-
-const standar = Roboto({
-    subsets: ["latin"],
-    weight: "400", 
-});
 
 export default function LogoClinica() {
     return (
