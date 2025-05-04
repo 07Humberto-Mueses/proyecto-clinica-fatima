@@ -1,7 +1,7 @@
 "use Client"
 import React from 'react'
 import Link from 'next/link'
-import { LogoClinica } from '../atoms/LogoClinica'
+import LogoClinica from '../atoms/LogoClinica'
 import { NavLinkItem } from '../molecules/NavLinkItem'
 import { LogOut } from "lucide-react";
 import { Button } from '../atoms/Button';

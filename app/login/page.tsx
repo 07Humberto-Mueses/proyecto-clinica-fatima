@@ -3,12 +3,12 @@ import Image from "next/image";
 import { SocialContainer } from "@/components/molecules/SocialContainer";
 import LoginForm from "@/components/molecules/LoginForm";
 
-export default function LoginPage() {
+export default function Page() {
   return (
     <main className="flex h-screen">
       <div className="relative bg-white-200 w-1/2 h-full overflow-hidden">
         <Image
-          src="/imagenLogin.png"
+          src="/imagenLogin2.png"
           fill
           className="object-cover opacity-50"
           alt="Captura del proyecto mostrando la version de escritorio"

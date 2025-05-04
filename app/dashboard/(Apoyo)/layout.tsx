@@ -1,9 +1,9 @@
-import DynamicLayoutApoyo from "@/components/layouts/DynamicLayoutApoyo";
+import DynamicLayouts from "@/components/layouts/DynamicLayouts";
 
 export default function ApoyoLayout({ children }: { children: React.ReactNode }) {
   return (
-    <DynamicLayoutApoyo>
+    <DynamicLayouts>
       {children}
-    </DynamicLayoutApoyo>
+    </DynamicLayouts>
   );
 }

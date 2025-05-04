@@ -13,7 +13,7 @@ interface SubItem {
 
 interface NavItemWhithSubItems {
     name: string;
-    icon?: React.ComponentType<{ className?: string }>; // Icon opcional
+    icon?: React.ComponentType<{ className?: string }>;
     subItem: SubItem[];
 }
 
@@ -31,7 +31,7 @@ interface NavLinks {
 }
 
 interface NavLinkItemProps {
-    navLinks: NavLinks; // Los datos que se reciben como props
+    navLinks: NavLinks;
 }
 
 export function NavLinkItem({ navLinks }: NavLinkItemProps) {
@@ -62,7 +62,7 @@ export function NavLinkItem({ navLinks }: NavLinkItemProps) {
                                         hover:bg-[#D9ABA7] md:p-1 md:px-2`}
                                     onClick={() => toggleMenu(link.name)}
                                 >
-                                    <div className="flex h-[48px] grow items-center justify-start mx-[15px] gap-2 rounded-md text-sm font-medium">
+                                    <div className="flex h-[48px] grow items-center justify-start mx-[10px] gap-2 rounded-md text-sm font-medium">
                                         {LinkIcon && <LinkIcon className="w-5" />}
                                         <p className='hidden md:block'>{link.name}</p>
                                     </div>
@@ -72,7 +72,7 @@ export function NavLinkItem({ navLinks }: NavLinkItemProps) {
                                 <motion.ul
                                     initial={false}
                                     animate={{ height: isOpen ? "auto" : 0 }}
-                                    className="flex flex-col overflow-hidden mr-15 ml-15 mb-1 items-start transition-all duration-300 text-xs justify-center z-50"
+                                    className="flex flex-col overflow-hidden mr-8 ml-10 mt-1 items-start transition-all duration-300 text-xs justify-center z-50"
                                 >
                                     {link.subItem.map((item) => (
                                         <li key={item.name} className='flex items-center justify-start gap-2 pr-2 hover:bg-[#D9ABA7] w-full p-1 rounded-md'>
@@ -90,9 +90,9 @@ export function NavLinkItem({ navLinks }: NavLinkItemProps) {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="flex w-full items-center gap-2 rounded-md text-base bg-[#F2D8D5] hover:bg-[#D9ABA7] md:p-1 md:px-2"
+                                className="flex w-full items-center rounded-md text-base hover:bg-[#D9ABA7] md:p-1 md:px-2"
                             >
-                                <div className="flex h-[48px] grow items-center justify-start mx-[15px] gap-2 rounded-md text-sm font-medium">
+                                <div className="flex h-[48px] grow items-center justify-start mx-[10px] gap-2 rounded-md text-sm font-medium">
                                     {navLinks.icon && <navLinks.icon className="w-5" />}
                                     <p className='hidden md:block'>{link.name}</p>
                                 </div>

@@ -1,4 +1,4 @@
-import { SquarePlus, Bed, Refrigerator, CirclePlus, Pill, Users, TestTubes, Cherry, Syringe, Radiation, CircuitBoard, SquareEqual, BedDouble, BedSingle, Activity, Stethoscope, ShieldPlus, Calendar } from "lucide-react";
+import { SquarePlus, Bed, Refrigerator, CirclePlus, Pill, Users, TestTubes, Cherry, Syringe, Radiation, CircuitBoard, SquareEqual, BedDouble, BedSingle, Activity, Stethoscope, ShieldPlus, Calendar, Baby } from "lucide-react";
 
 export const diagnosticasNavLinks = {
     name: "Ayudas Diagnosticas",
@@ -124,7 +124,7 @@ export const internacionNavLinks = {
         },
         {
             name: "UCI Neonatos", 
-            icon: Activity, 
+            icon: Baby,
             subItem: [
                 { name: "Caracterizacion y Descriptivo", href: "#" },
                 { name: "Formatos", href: "#" },

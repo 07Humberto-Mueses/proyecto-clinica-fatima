@@ -1,4 +1,4 @@
-import { UserRoundCog, LetterText, Construction, Container, NotebookPen, CalendarCheck, Forklift, GraduationCap, Scale, ShieldCheck, MonitorCog, FolderSearch, CreditCard, Calculator, BanknoteArrowDown, UserRoundCheck, Briefcase } from "lucide-react";
+import { UserRoundCog, LetterText, Construction, Container, NotebookPen, CalendarCheck, Forklift, GraduationCap, Scale, ShieldCheck, MonitorCog, FolderSearch, CreditCard, Calculator, BanknoteArrowDown, UserRoundCheck, Briefcase, ChartLine, BookCopy } from "lucide-react";
 
 export const apoyoLogisticoNavLinks = {
     name: "Apoyo Logistico",
@@ -66,6 +66,19 @@ export const financieraNavLinks = {
             ]
         },
         {
+            name: "Liquidacion", 
+            icon: BookCopy, 
+            subItem: [
+                { name: "Ayudas Diagnosticas", href: "#" },
+                { name: "Laboratorio Clinico", href: "#" },
+                { name: "Procedimientos", href: "#" },
+                { name: "Consultas", href: "#" },
+                { name: "Ambulancias", href: "#" },
+                { name: "Contratacion", href: "#" },
+                { name: "Configuracion", href: "#" },
+            ]
+        },
+        {
             name: "Cartera", 
             icon: Briefcase, 
             subItem: [
@@ -101,9 +114,9 @@ export const informacionNavLinks = {
         },
         {
             name: "Estadistica", 
-            icon: FolderSearch, 
+            icon: ChartLine, 
             subItem: [
-                { name: "Caracterizacion y Descriptivo", href: "#" },
+                { name: "Caracterizacion y Descriptivo", href: "/dashboard/informacion/estadistica" },
                 { name: "Formatos", href: "#" },
                 { name: "Documentos", href: "#" },
             ]
