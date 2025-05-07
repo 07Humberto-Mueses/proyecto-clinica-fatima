@@ -7,7 +7,7 @@ import { Calculator } from 'lucide-react'
 import { CardLiquidacion } from '../molecules/CardLiquidacion'
 
 interface Resultado {
-  [key: string]: any
+  [key: string]: string | number | undefined;
   LABORATORIO: string;
   TARIFA: number;
 }
@@ -37,7 +37,7 @@ export default function BuscarVariosExcel() {
         throw new Error(errorData.error || `Error ${res.status}: ${res.statusText}`)
       }
 
-      const data = await res.json()
+      const data: Resultado[] = await res.json();
 
       if (data.length === 0) {
         setError('No se encontraron resultados para la búsqueda.')

@@ -5,10 +5,14 @@
 import React, { useState } from 'react'
 import * as XLSX from 'xlsx'
 
+type ExcelRow = {
+  [key: string]: string | number | boolean | null;
+};
+
 export default function BuscarExcel() {
   const [file, setFile] = useState<File | null>(null)
   const [inputValue, setInputValue] = useState('')
-  const [results, setResults] = useState<any | null>(null)
+  const [results, setResults] = useState<ExcelRow | null>(null);
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const uploadedFile = e.target.files?.[0]
@@ -25,7 +29,7 @@ export default function BuscarExcel() {
       const data = e.target?.result
       const workbook = XLSX.read(data, { type: 'binary' })
       const worksheet = workbook.Sheets[workbook.SheetNames[0]]
-      const jsonData = XLSX.utils.sheet_to_json(worksheet)
+      const jsonData: ExcelRow[] = XLSX.utils.sheet_to_json(worksheet);
 
       const foundRow = jsonData.find((row: any) =>
         Object.values(row).some(value => value == inputValue)

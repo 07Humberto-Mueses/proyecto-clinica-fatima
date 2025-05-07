@@ -9,9 +9,9 @@ interface CardLiquidacionProps {
 }
 
 export const CardLiquidacion = ({ imagen, title, valor, isMin = false }: CardLiquidacionProps) => {
-    const bgColor = isMin ? "bg-green-400" : "bg-gray-200";
+    const bgColor = isMin ? "bg-[#93D94E]" : "bg-[#E1523D]";
     return (
-        <div className="items-center justify-center border-[2px] border-gray-300 bg-white rounded-xl shadow-lg">
+        <div className={`items-center justify-center border-[2px] border-gray-300 rounded-xl shadow-lg bg-[#F2F2F2]`}>
             <div className="flex items-center justify-center w-full py-2">
                 {typeof imagen === "string" ? (
                     <Image 
@@ -23,9 +23,9 @@ export const CardLiquidacion = ({ imagen, title, valor, isMin = false }: CardLiq
                 ) : (imagen)
                 }
             </div>
-            <div className="flex flex-col px-3 py-1 items-center justify-center bg-[#93D94E]">
-                <label htmlFor="">{title}</label>
-                <label htmlFor="" className="font-bold">Costo: {valor}</label>
+            <div className={`flex flex-col px-3 py-1 items-center rounded-lg justify-center ${bgColor}`}>
+                <label htmlFor="text">{title}</label>
+                <label htmlFor="text" className="font-bold">Costo: {valor}</label>
             </div>
         </div>
     )

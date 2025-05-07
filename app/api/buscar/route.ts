@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   try {
     // Ruta a la carpeta donde están los archivos Excel
     const carpeta = path.join(process.cwd(), 'data/excel')
-    let resultados: any[] = []
+    const resultados: any[] = []
 
     try {
       // Verificar si la carpeta existe

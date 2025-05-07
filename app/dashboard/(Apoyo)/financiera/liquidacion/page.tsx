@@ -1,4 +1,3 @@
-import BuscarExcel from '@/components/organisms/BuscarExcel'
 import BuscarVariosExcel from '@/components/organisms/BuscarVariosExcel'
 import React from 'react'
 
