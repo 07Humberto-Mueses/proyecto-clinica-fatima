@@ -12,6 +12,7 @@ export default function Page() {
           fill
           className="object-cover opacity-50"
           alt="Captura del proyecto mostrando la version de escritorio"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
           <Image

@@ -69,7 +69,7 @@ export const financieraNavLinks = {
             name: "Liquidacion", 
             icon: BookCopy, 
             subItem: [
-                { name: "Ayudas Diagnosticas", href: "#" },
+                { name: "Ayudas Diagnosticas", href: "/dashboard/financiera/liquidacion" },
                 { name: "Laboratorio Clinico", href: "#" },
                 { name: "Procedimientos", href: "#" },
                 { name: "Consultas", href: "#" },

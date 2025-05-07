@@ -31,6 +31,7 @@ export default function RootLayout({
             height={300}
             className="absolute top-20 right-30 opacity-10"
             alt="Fondo"
+            priority
           />
           <Image
             src="/Fondo/fondoCorazon.png"
@@ -45,6 +46,7 @@ export default function RootLayout({
             height={380}
             className="absolute bottom-0 left-0 opacity-10"
             alt="Fondo"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         {children}
