@@ -31,7 +31,7 @@ export default function BuscarExcel() {
       const worksheet = workbook.Sheets[workbook.SheetNames[0]]
       const jsonData: ExcelRow[] = XLSX.utils.sheet_to_json(worksheet);
 
-      const foundRow = jsonData.find((row: any) =>
+      const foundRow = jsonData.find((row: ExcelRow) =>
         Object.values(row).some(value => value == inputValue)
       )
 

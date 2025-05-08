@@ -3,6 +3,10 @@ import path from 'path'
 import fs from 'fs/promises'
 import { read, utils } from 'xlsx'
 
+interface FilaExcel {
+  [key: string]: string | number | boolean | null | undefined;
+}
+
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
   const numero = searchParams.get('numero')
@@ -14,7 +18,7 @@ export async function GET(req: Request) {
   try {
     // Ruta a la carpeta donde están los archivos Excel
     const carpeta = path.join(process.cwd(), 'data/excel')
-    const resultados: any[] = []
+    const resultados: FilaExcel[] = []
 
     try {
       // Verificar si la carpeta existe
