@@ -7,6 +7,8 @@ interface FilaExcel {
   [key: string]: string | number | boolean | null | undefined;
 }
 
+type ExcelRow = Record<string, string | number | boolean | null | undefined>;
+
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
   const numero = searchParams.get('numero')
@@ -56,12 +58,12 @@ export async function GET(req: Request) {
         }
         
         const hoja = libro.Sheets[libro.SheetNames[0]]
-        const datos = utils.sheet_to_json(hoja)
+        const datos = utils.sheet_to_json<ExcelRow>(hoja)
 
         console.log(`Archivo ${archivo}: ${datos.length} filas encontradas`)
 
         // Buscar coincidencias
-        datos.forEach((fila: any) => {
+        datos.forEach((fila: ExcelRow) => {
           const valores = Object.values(fila).map(valor => 
             valor !== null && valor !== undefined ? String(valor) : ''
           )
