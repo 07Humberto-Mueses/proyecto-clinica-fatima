@@ -4,6 +4,9 @@
 
 import React, { useState } from 'react'
 import * as XLSX from 'xlsx'
+import { Title } from '../atoms/Title';
+import { Button } from '../atoms/Button';
+import { Calculator } from 'lucide-react';
 
 type ExcelRow = {
   [key: string]: string | number | boolean | null;
@@ -42,25 +45,24 @@ export default function BuscarExcel() {
   }
 
   return (
-    <div className='p-6 max-w-xl mx-auto bg-white shadow rounded'>
-      <h1 className='text-xl font-bold mb-4'>Buscar en Excel</h1>
+    <div className='flex flex-col p-8 max-w-3xl items-center justify-center'>
+      <Title>PREPARACIÓN DE PROPUESTAS LA CONTRATACIÓN CON ENTIDADES</Title>
 
       <input type="file" accept=".xlsx, .xls" onChange={handleFile} className='mb-4' />
 
       <div className='flex gap-2 mb-4'>
         <input
           type="text"
-          placeholder="Número a buscar"
+          placeholder="Buscar"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           className='border p-2 flex-1'
         />
-        <button
+        <Button
           onClick={handleSearch}
-          className='bg-blue-500 text-white px-4 py-2 rounded'
         >
-          Buscar
-        </button>
+          <Calculator/> Calcular
+        </Button>
       </div>
 
       {results && (

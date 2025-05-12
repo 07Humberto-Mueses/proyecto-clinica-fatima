@@ -69,12 +69,12 @@ export const financieraNavLinks = {
             name: "Liquidacion", 
             icon: BookCopy, 
             subItem: [
-                { name: "Ayudas Diagnosticas", href: "/dashboard/financiera/liquidacion" },
-                { name: "Laboratorio Clinico", href: "#" },
+                { name: "Ayudas Diagnosticas", href: "#" },
+                { name: "Laboratorio Clinico", href: "/dashboard/financiera/liquidacion" },
                 { name: "Procedimientos", href: "#" },
                 { name: "Consultas", href: "#" },
                 { name: "Ambulancias", href: "#" },
-                { name: "Contratacion", href: "#" },
+                { name: "Contratacion", href: "/dashboard/financiera/contratacion" },
                 { name: "Configuracion", href: "#" },
             ]
         },
